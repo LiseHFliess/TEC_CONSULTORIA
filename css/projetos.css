@@ -1,0 +1,124 @@
+/* --- Variáveis de Cores (Opcional, mas recomendado) --- */
+:root {
+    --gh-bg: #ffffff;
+    --gh-border: #d0d7de;
+    --gh-text-primary: #24292f;
+    --gh-text-secondary: #57606a;
+    --gh-link: #0969da;
+    --gh-link-hover: #044b8f;
+    --gh-shadow: rgba(140, 149, 159, 0.2);
+}
+
+/* --- Seção Principal --- */
+.github-projects-showcase {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    /* Layout de grid para responsividade */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.github-projects-showcase h2 {
+    grid-column: 1 / -1; /* O título ocupa todas as colunas */
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--gh-text-primary);
+    font-size: 2em;
+}
+
+/* --- Estilo do Card Individual --- */
+.github-project-card {
+    border: 1px solid var(--gh-border);
+    border-radius: 6px;
+    transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    background-color: var(--gh-bg);
+}
+
+.github-project-card:hover {
+    box-shadow: 0 4px 12px var(--gh-shadow);
+    border-color: var(--gh-link); /* Borda fica azul no hover */
+}
+
+.card-link {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    text-decoration: none;
+    height: 100%;
+    color: var(--gh-text-primary);
+}
+
+/* --- Cabeçalho (Nome do Repositório) --- */
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.icon-repo {
+    font-style: normal; /* Para o ícone de repositório */
+    margin-right: 8px;
+    color: var(--gh-text-secondary);
+}
+
+.repo-name {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--gh-link);
+    transition: color 0.2s;
+}
+
+.github-project-card:hover .repo-name {
+    color: var(--gh-link-hover);
+    text-decoration: underline;
+}
+
+/* --- Descrição --- */
+.repo-description {
+    color: var(--gh-text-secondary);
+    font-size: 0.9em;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    flex-grow: 1; /* Garante que os footers fiquem alinhados */
+}
+
+/* --- Rodapé (Metadados) --- */
+.card-footer {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Garante que os itens quebrem a linha em telas pequenas */
+    padding-top: 8px;
+    border-top: 1px dashed var(--gh-border);
+    margin-top: 8px;
+    font-size: 0.85em;
+    color: var(--gh-text-secondary);
+}
+
+.language, .meta-data {
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+    white-space: nowrap; /* Evita quebras de linha em itens pequenos */
+}
+
+/* Bolha da Cor da Linguagem */
+.language-color {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.meta-data i {
+    margin-right: 4px;
+    font-style: normal; /* Para os símbolos '★' e '⑂' */
+}
+
+.last-update {
+    margin-left: auto; /* Empurra a data para a direita */
+    font-size: 0.8em;
+}
