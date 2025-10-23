@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/projetos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    
+    <header class="main-header">
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <h1 class="logo">Startup Tech Estudantil</h1>
+    </header>
+
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-links">
+            <a href="../index.html"><i class="fas fa-home"></i> Início</a>
+            <a href="../html/servico.html"><i class="fas fa-briefcase"></i> Nossos Serviços</a>
+            <a href="../html/sobre.html"><i class="fas fa-users"></i> Quem Somos</a>
+            <a href="../html/integrantes.html" class="active"><i class="fas fa-user-tie"></i> Nosso Time</a>
+            <a href="../html/contato.html"><i class="fas fa-envelope"></i> Contato</a>
+        </div>
+    </nav>
+
+
+    <section class="github-projects-showcase">
+        <h2>Meus Projetos no GitHub</h2>
+    
+        <div class="github-project-card">
+            <a href="URL_DO_REPOSITORIO" target="_blank" class="card-link">
+                <div class="card-header">
+                    <i class="icon-repo"></i> <h3 class="repo-name">Nome-do-Projeto-Incrivel</h3>
+                </div>
+    
+                <p class="repo-description">
+                    Uma descrição concisa e informativa sobre o que o projeto faz.
+                    (Máximo de 2-3 linhas)
+                </p>
+    
+                <div class="card-footer">
+                    <span class="language">
+                        <span class="language-color" style="background-color: #f1e05a;"></span>
+                        JavaScript
+                    </span>
+                    <span class="meta-data">
+                        <i class="icon-star">★</i>
+                        25
+                    </span>
+                    <span class="meta-data">
+                        <i class="icon-fork">⑂</i>
+                        5
+                    </span>
+                    <span class="meta-data last-update">
+                        Atualizado em: 15/10/2025
+                    </span>
+                </div>
+            </a>
+        </div>
+        </section>
+
+        <script>
+            document.getElementById('menuToggle').onclick = function() {
+                document.getElementById('sidebar').classList.toggle('open');
+                document.getElementById('contentWrapper').classList.toggle('shifted');
+                this.querySelector('i').classList.toggle('fa-bars');
+                this.querySelector('i').classList.toggle('fa-times');
+            };
+        </script>
+</body>
+</html>
