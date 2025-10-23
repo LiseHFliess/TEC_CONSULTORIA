@@ -1,0 +1,159 @@
+/* ==================================== */
+/* 1. LAYOUT GERAL E DESLOCAMENTO (PADRÃO PARA PÁGINAS DE CONTEÚDO) */
+/* ==================================== */
+
+/* Ajusta o container principal para o deslocamento do sidebar e centralização */
+.content-page {
+    padding-top: 20px; 
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1200px; 
+    margin: 0 auto;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+@media (min-width: 768px) {
+    .content-page.shifted {
+        margin-left: 250px; 
+        width: calc(100% - 250px); 
+    }
+}
+
+
+/* ==================================== */
+/* 2. ESTILOS ESPECÍFICOS DOS SERVIÇOS */
+/* ==================================== */
+
+.page-header {
+    text-align: center;
+    padding: 20px 0 40px;
+}
+
+.service-icon-title {
+    color: #1a73e8;
+    margin-bottom: 10px;
+}
+
+.page-header h2 {
+    color: #2c3e50;
+    font-size: 2.2em;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* --- GRID PRINCIPAL DOS SERVIÇOS --- */
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+@media (min-width: 768px) {
+    .services-grid {
+        /* Duas colunas em telas médias */
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (min-width: 1024px) {
+    .services-grid {
+        /* Três colunas em telas maiores */
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+
+
+/* --- CARD DETALHADO DO SERVIÇO --- */
+.service-detail-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex; /* Para organizar o header, body e botão verticalmente */
+    flex-direction: column;
+    transition: transform 0.3s;
+}
+
+.service-detail-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    background-color: #f0f8ff; /* Fundo suave */
+    padding: 25px;
+    text-align: center;
+    border-bottom: 3px solid #1a73e8; /* Cor de destaque */
+}
+
+.card-header i {
+    color: #1a73e8;
+    margin-bottom: 10px;
+}
+
+.card-header h3 {
+    font-size: 1.4em;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.service-target {
+    font-style: italic;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.card-body {
+    padding: 25px;
+    flex-grow: 1; /* Garante que o body ocupe o espaço restante */
+}
+
+.card-body p {
+    margin-bottom: 15px;
+}
+
+.card-body h4 {
+    color: #1a73e8;
+    font-size: 1.1em;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.service-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.service-list li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #eee;
+    font-size: 0.95em;
+}
+
+.service-list li:last-child {
+    border-bottom: none;
+}
+
+.service-list i {
+    color: #00b894; /* Cor para ícones de checklist */
+    margin-right: 8px;
+}
+
+/* Estilo para o botão no final do card */
+.btn-full {
+    width: 100%;
+    border-radius: 0 0 10px 10px; /* Borda arredondada apenas embaixo */
+    padding: 15px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+    display: block; /* Garante que o link ocupe 100% da largura */
+    text-decoration: none;
+    text-align: center;
+}

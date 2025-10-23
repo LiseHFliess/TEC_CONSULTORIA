@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início | Consultoria Tech Estudantil</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <h1 class="logo">Startup Tech Estudantil</h1>
+    </header>
+
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-links">
+            <a href="./index.html"><i class="fas fa-home"></i> Início</a>
+            <a href="./html/servico.html"><i class="fas fa-briefcase"></i> Nossos Serviços</a>
+            <a href="./html/sobre.html"><i class="fas fa-users"></i> Quem Somos</a>
+            <a href="./html/integrantes.html" class="active"><i class="fas fa-user-tie"></i> Nosso Time</a>
+            <a href="./html/contato.html"><i class="fas fa-envelope"></i> Contato</a>
+        </div>
+    </nav>
+
+    <main class="home-container" id="contentWrapper">
+
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Potencialize Seu Negócio Digital.</h2>
+                <p>Nós somos uma equipe de estudantes de tecnologia dedicados a construir a marca pessoal e a presença
+                    digital de microempreendedores.</p>
+                <div class="hero-actions">
+                    <a href="#servicos" class="btn btn-primary"><i class="fas fa-rocket"></i> Ver Nossos Serviços</a>
+                    <a href="#contato" class="btn btn-secondary"><i class="fas fa-phone-alt"></i> Fale Conosco</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <i class="fas fa-laptop-code fa-5x"></i>
+            </div>
+        </section>
+
+        <section class="services" id="servicos">
+            <h2>Nossos Serviços Flexíveis</h2>
+            <p class="services-intro">Escolha o caminho que melhor se adapta ao seu microempreendimento. Você pode
+                contratar nossos serviços em conjunto ou separadamente.</p>
+
+            <div class="service-cards">
+
+                <div class="service-card marca">
+                    <i class="fas fa-lightbulb fa-3x"></i>
+                    <h3>Criação de Marca Pessoal</h3>
+                    <p>Definimos sua identidade, valores e a voz da sua marca. Transforme sua paixão em um ativo
+                        reconhecido no mercado digital.</p>
+                    <a href="#contato" class="btn btn-small">Quero a Consultoria</a>
+                </div>
+
+                <div class="service-card site">
+                    <i class="fas fa-globe fa-3x"></i>
+                    <h3>Criação de Site Personalizado</h3>
+                    <p>Desenvolvemos um site profissional, responsivo e otimizado para que seus clientes o encontrem e
+                        conheçam seus produtos/serviços.</p>
+                    <a href="#contato" class="btn btn-small">Quero o Site</a>
+                </div>
+
+                <div class="service-card completo">
+                    <i class="fas fa-cogs fa-3x"></i>
+                    <h3>Pacote Completo (Marca + Site)</h3>
+                    <p>O combo perfeito! Unimos branding sólido com um site de alta performance para lançar ou relançar
+                        sua presença digital com força total.</p>
+                    <a href="#contato" class="btn btn-small">Pacote Completo</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-us" id="quem-somos">
+            <h2>Por Que Nos Escolher?</h2>
+            <div class="about-us-content">
+                <p>Nós somos mais do que consultores; somos estudantes de tecnologia com paixão por inovação e
+                    resultados. Oferecemos um serviço de alta qualidade com preços acessíveis, impulsionados pela
+                    energia e conhecimento das últimas tendências do mercado.</p>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> <span style="color: blue;">Preços Acessíveis:</span> Serviços profissionais que cabem no
+                        bolso do microempreendedor.</li>
+                    <li><i class="fas fa-check-circle"></i> <span style="color: blue;">Visão Atualizada:</span> Usamos as tecnologias e estratégias de
+                        marca mais recentes.</li>
+                    <li><i class="fas fa-check-circle"></i> <span style="color: blue;" >Compromisso com o Sucesso:</span> Seu crescimento é o nosso
+                        portfólio.</li>
+                </ul>
+                <div style="text-align: center; margin-top: 30px;">
+                    <a href="sobre.html" class="btn btn-secondary">Saiba Mais Sobre Nós</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <script>
+        document.getElementById('menuToggle').onclick = function () {
+            document.getElementById('sidebar').classList.toggle('open');
+
+            // Aplica a classe 'shifted' ao 'contentWrapper' (main)
+            document.getElementById('contentWrapper').classList.toggle('shifted');
+
+            // Altera o ícone (hambúrguer para X)
+            this.querySelector('i').classList.toggle('fa-bars');
+            this.querySelector('i').classList.toggle('fa-times');
+        };
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,167 @@
+/* ==================================== */
+/* 1. LAYOUT GERAL E DESLOCAMENTO (PADRÃO PARA PÁGINAS DE CONTEÚDO) */
+/* ==================================== */
+
+/* O Content-page é o wrapper principal. Se você já tem este estilo no seu style.css, 
+   pode removê-lo daqui, mas estou incluindo para que funcione em isolamento. */
+   .content-page {
+    padding-top: 20px; 
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1200px; 
+    margin: 0 auto;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+@media (min-width: 768px) {
+    .content-page.shifted {
+        margin-left: 250px; 
+        width: calc(100% - 250px); 
+    }
+}
+
+
+/* ==================================== */
+/* 2. ESTILOS ESPECÍFICOS DO CONTATO */
+/* ==================================== */
+
+.page-header {
+    text-align: center;
+    padding: 20px 0 40px;
+}
+
+.page-header h2 {
+    color: #1a73e8;
+    font-size: 2.2em;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    color: #555;
+}
+
+/* --- GRID DE CONTATO (FORMULÁRIO E MAPA) --- */
+.contact-grid {
+    display: grid;
+    /* Duas colunas em telas grandes */
+    grid-template-columns: 1fr; 
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+@media (min-width: 900px) {
+    .contact-grid {
+        grid-template-columns: 1.2fr 1fr; /* O formulário é um pouco maior que o mapa */
+    }
+}
+
+/* --- ESTILOS DO FORMULÁRIO --- */
+.contact-form-wrapper h3,
+.contact-map-wrapper h3 {
+    color: #2c3e50;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    border-left: 4px solid #1a73e8;
+    padding-left: 10px;
+}
+
+.contact-form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-group label i {
+    margin-right: 5px;
+    color: #1a73e8;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border-color: #1a73e8;
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form .btn-primary {
+    width: 100%;
+    margin-top: 10px;
+    /* Garante que o botão use o estilo da classe global .btn-primary do style.css */
+}
+
+/* --- INFO DIRETA --- */
+.contact-info {
+    margin-top: 30px;
+    padding: 20px 0;
+}
+
+.contact-info p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.contact-info i {
+    color: #1a73e8;
+    margin-right: 8px;
+}
+
+/* --- ESTILOS DO MAPA --- */
+.map-embed {
+    /* Garante que o iframe seja responsivo */
+    position: relative;
+    padding-bottom: 75%; /* Proporção 4:3 (450px de altura padrão em 600px de largura) */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.map-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.address-text {
+    text-align: center;
+    margin-top: 15px;
+    color: #555;
+    font-style: italic;
+}
+
+.address-text i {
+    color: #1a73e8;
+    margin-right: 5px;
+}

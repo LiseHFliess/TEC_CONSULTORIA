@@ -1,0 +1,125 @@
+/* ==================================== */
+/* 1. LAYOUT GERAL DA PÁGINA (Para o Wrapper principal) */
+/* ==================================== */
+
+/* O Content-page é o wrapper para o conteúdo interno da página, respeitando o sidebar */
+.content-page {
+    padding-top: 20px; 
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1200px; /* Limita a largura do conteúdo para melhor leitura */
+    margin: 0 auto;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+/* Deslocamento do Conteúdo (Necessário para a interação com o sidebar) */
+@media (min-width: 768px) {
+    .content-page.shifted {
+        margin-left: 250px; 
+        /* Reduz a largura para evitar quebras em telas maiores */
+        width: calc(100% - 250px); 
+    }
+}
+
+/* Estilos gerais para seções internas */
+.section-page {
+    padding: 40px 0;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.section-page:last-child {
+    border-bottom: none;
+}
+
+/* ==================================== */
+/* 2. ESTILOS ESPECÍFICOS DO CONTEÚDO "SOBRE NÓS" */
+/* ==================================== */
+
+/* Estilos do Cabeçalho da página (About Hero) */
+.about-header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f0f8ff; /* Fundo suave para destaque */
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+.about-header i {
+    color: #1a73e8;
+    margin-bottom: 15px;
+}
+
+.about-header h2 {
+    font-size: 2.5em;
+    color: #1a73e8;
+    margin-bottom: 10px;
+}
+
+.about-header p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Estilos da seção Missão e Conteúdo */
+.mission h3 {
+    color: #2c3e50;
+    font-size: 1.8em;
+    border-left: 5px solid #1a73e8;
+    padding-left: 15px;
+    margin-bottom: 25px;
+}
+
+.mission p {
+    font-size: 1.05em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Estilos para os valores (cards) */
+.values-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.values-list > div {
+    flex: 1 1 250px; /* Garante que se ajustem em 3 colunas em telas maiores */
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    transition: box-shadow 0.3s;
+}
+
+.values-list > div:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.values-list i {
+    color: #00b894;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.values-list h4 {
+    color: #1a73e8;
+    margin-bottom: 10px;
+}
+
+/* Seção Prévia do Time (Chamada para ação) */
+.team-preview {
+    text-align: center;
+}
+
+.team-preview h3 {
+    color: #2c3e50;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.team-preview p {
+    margin-bottom: 30px;
+}

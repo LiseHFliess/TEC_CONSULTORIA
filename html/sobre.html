@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós | Startup Tech Estudantil</title>
+    
+    <link rel="stylesheet" href="../css/style.css"> 
+    
+    <link rel="stylesheet" href="../css/sobre.css"> 
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <h1 class="logo">Startup Tech Estudantil</h1>
+    </header>
+
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-links">
+            <a href="../index.html"><i class="fas fa-home"></i> Início</a>
+            <a href="../html/servico.html"><i class="fas fa-briefcase"></i> Nossos Serviços</a>
+            <a href="../html/sobre.html"><i class="fas fa-users"></i> Quem Somos</a>
+            <a href="../html/integrantes.html" class="active"><i class="fas fa-user-tie"></i> Nosso Time</a>
+            <a href="../html/contato.html"><i class="fas fa-envelope"></i> Contato</a>
+        </div>
+    </nav>
+    
+    <main class="content-page" id="contentWrapper">
+        
+        <section class="section-page about-hero">
+            <div class="about-header">
+                <i class="fas fa-graduation-cap fa-3x"></i>
+                <h2>Quem Somos?</h2>
+                <p>A força da juventude e a paixão pela tecnologia a serviço do seu crescimento.</p>
+            </div>
+        </section>
+
+        <section class="section-page mission">
+            <h3>Nossa Missão</h3>
+            <p>Empoderar microempreendedores e autônomos no universo digital, oferecendo soluções de <span>Branding e Web Development</span> acessíveis e de altíssima qualidade. Usamos nosso conhecimento acadêmico atualizado para transformar pequenos sonhos em grandes presenças online.</p>
+
+            <div class="values-list">
+                <div>
+                    <i class="fas fa-lightbulb"></i>
+                    <h4>Inovação</h4>
+                    <p>Sempre à frente, aplicando as últimas tendências em design e tecnologia.</p>
+                </div>
+                <div>
+                    <i class="fas fa-handshake"></i>
+                    <h4>Acessibilidade</h4>
+                    <p>Serviços profissionais que respeitam o orçamento de quem está começando.</p>
+                </div>
+                <div>
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Confiança</h4>
+                    <p>Transparência total e dedicação em cada projeto.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-page team-preview">
+            <h3>Nossa Vantagem Estudantil</h3>
+            <p>Somos um grupo coeso de estudantes apaixonados por desenvolvimento, gestão de projetos e comunicação. Embora sejamos estudantes, nossa consultoria é tratada com o profissionalismo e a dedicação de uma startup. <span>Seu sucesso é o nosso portfólio!</span></p>
+            
+            <a href="perfil.html" class="btn btn-primary">Conheça Nossos Especialistas <i class="fas fa-arrow-right"></i></a>
+        </section>
+        
+    </main>
+    <script>
+        document.getElementById('menuToggle').onclick = function() {
+            document.getElementById('sidebar').classList.toggle('open');
+            
+            // Aplica a classe 'shifted' ao 'contentWrapper' (main)
+            document.getElementById('contentWrapper').classList.toggle('shifted');
+            
+            // Altera o ícone (hambúrguer para X)
+            this.querySelector('i').classList.toggle('fa-bars');
+            this.querySelector('i').classList.toggle('fa-times');
+        };
+    </script>
+</body>
+</html>
